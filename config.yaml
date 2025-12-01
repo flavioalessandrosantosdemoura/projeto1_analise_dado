@@ -1,0 +1,30 @@
+# Configurações do sistema de análise
+analysis:
+  input_file: "sales.csv"
+  date_format: "%Y-%m-%d"
+  currency: "R$"
+  
+visualization:
+  style: "seaborn-darkgrid"
+  colors:
+    primary: "#2E86AB"
+    secondary: "#A23B72"
+    tertiary: "#F18F01"
+  figure_size: [12, 8]
+  dpi: 300
+  
+export:
+  formats: ["csv", "excel", "png", "html"]
+  output_directory: "outputs/"
+  
+business_rules:
+  price_categories:
+    low: [0, 50]
+    medium: [50, 100]
+    high: [100, 150]
+    premium: [150, 200]
+  revenue_categories:
+    small: [0, 100]
+    medium: [100, 500]
+    large: [500, 1000]
+    xlarge: [1000, inf]
